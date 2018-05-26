@@ -10,21 +10,6 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
     echo "Possible file upload attack!\n";
 }
 
-foreach(glob('*') as $file){
-    if(is_file($file)){
-        echo htmlspecialchars($file);
-        echo '<br>';
-    }
-}
-
-echo 'aaaaa<br>';
-
-foreach(glob('files/*') as $file){
-    if(is_file($file)){
-        echo htmlspecialchars($file);
-        echo '<br>';
-    }
-}
-
+require('download.php');
 
 ?>
