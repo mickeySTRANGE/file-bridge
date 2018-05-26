@@ -11,7 +11,7 @@
   <?
   foreach(glob('files/*') as $file){
     if(is_file($file)){ ?>
-    <a href="files/<? echo htmlspecialchars($file); ?>">
+    <a href="<? echo htmlspecialchars($file); ?>">
       <? echo htmlspecialchars($file); ?>
     </a>
     <br>
