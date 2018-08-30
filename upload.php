@@ -3,6 +3,8 @@
 $uploaddir = '/app/files';
 $uploadfile = $uploaddir . '/' . basename($_FILES['userfile']['name']);
 
+echo ini_get('upload_max_filesize');
+
 echo '<pre>';
 var_dump($_FILES['userfile']['error']);
 echo '<br>';
